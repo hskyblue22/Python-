@@ -32,5 +32,15 @@ for number in wait_num:
 cafe = ["몰랑이" , "삐약이", "캥거루"]
 for customer in cafe:
     print("{}님, 음료가 준비되었습니다.".format(customer))
- 
 
+
+# for 한 줄로 (updated 8.10)
+students = ["몰랑이", "죠르디", "라이언"]
+students = [i + "S2" for i in students]
+print(students)
+
+people = ["Spider man", "Star lord","Gamora"]
+people = [i.upper() for i in people]
+print(people)
+
+'''1) i.upper() : ()꼭 적어주자!
