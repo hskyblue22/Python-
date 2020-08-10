@@ -33,8 +33,8 @@ print(array)
 # print(array.pop(-2:))    => 오류
 del array[-2:]
 print(array)
-''' pop: 범위를 지정하여 삭제 불가능,
-    del: 범위를 지정해서 삭제해준다.  '''
+''' pop: 범위를 지정하여 삭제 불가능, () 사용
+    del: 범위를 지정해서 삭제해준다. [] 사용  '''
 
 # 한 리스트에서 같은 요소 개수 세기
 array.append("강아지")
