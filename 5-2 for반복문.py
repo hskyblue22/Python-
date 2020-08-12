@@ -43,4 +43,4 @@ people = ["Spider man", "Star lord","Gamora"]
 people = [i.upper() for i in people]
 print(people)
 
-'''1) i.upper() : ()꼭 적어주자!
+'''1) i.upper() : ()꼭 적어주자!'''
