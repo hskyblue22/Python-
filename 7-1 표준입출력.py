@@ -1,3 +1,6 @@
+# 표준 입력(stdin)함수    ==> input()
+# 표준 출력(stdout)함수   ==> print()
+
 # sep= " , "   : 각 인자들 사이를 ,로 채우기  
 # end= " ? "   : 앞 문장의 끝부분을 ?로 넣고 뒷 문장을 연달아서 한줄에 출력 
 print("cake", "tart" ,"dacquoise", sep=", ", end = " 하나만 선택하세요. ")
