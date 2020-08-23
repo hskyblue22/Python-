@@ -35,8 +35,7 @@ print(b)
 # <print와 Return의 차이>
 # print : 함수에 영향 주지 않음. 괄호 안의 값을 단순히 입력
 #         함수 내부 코드에 return이 입력되어 있지않으면 함수의 마지막 부분에 자동으로 "Return None"을 입력한다.
-# return : 위치한 자리에서 함수를 종료시킴. 해당 위치의 값을 리턴값으로 출력함
-          
+# return : 위치한 자리에서 함수를 종료시킴. 해당 위치의 값을 리턴값으로 출력함   
 def practice(z,y):
     print(z+y)
     # return None
@@ -46,6 +45,46 @@ print("합한 값은 %s입니다." %practice(5,8))
 
 def bbo(x,w):
     return x+w
-print("합한 값은 %s입니다."%practice(5,8))
+print("합한 값은 %s입니다."%bbo(5,8))
+'''>>> 13 : 함수의 리턴값(결과값)을 집어넣어 출력한다.
+       return값은 해당함수가 어떤 값을 가질지 지정하는 것일 뿐 별도로 출력되지 않는다. '''
 
-'''>>> 13 : 함수의 리턴값(결과값)을 집어넣어 출력한다. '''
+
+
+# <return 단독으로 사용하여 함수 빠져나가기>
+
+def tell(anything): 
+    if anything == "바보":
+        return              # return 값 없다.
+    else:
+        print(anything)
+        return anything
+
+no = tell("바보")            # none : return값 없기 때문.
+print(no)
+yes = tell("냠냠")
+print(yes)
+
+
+
+# <함수에 input값을 넣고 싶을 때>
+# input값을 변수로 설정 => 함수에 그 변수 넣어서 print()
+
+def mo(see,watch):
+    return (see + " & " + watch)
+
+see = input("무엇이 보이시나요?")
+watch = input("또 무엇이 보이시나요?")
+print("지금 {}가 보여요".format(mo(see,watch)))
+
+
+# 함수 + if + input
+
+def must(m):
+    if m == "yes":
+        return "Great!"          
+    else:
+        return "Stay home"
+
+ask = input("You have a mask?")
+print("everyone : {}".format(must(ask)))
