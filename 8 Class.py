@@ -72,3 +72,28 @@ tank = unit("탱크",150,40)
                객체마다 고유한 성격을 가진다. 객체 서로서로 영향을 주지 않는다.
                marine1, marine2, tank 가 객체이다.
    5) marine1과 tank는 unit class의 인스턴스   '''
+
+#===================== 8-3 멤버변수 ==========================
+
+# 멤버변수: class내 정의된 함수
+#         ===> class unit에서는 name, hp, damage 가 멤버변수
+
+
+wraith1 = unit("레이스",80,5)   
+print("유닛 이름 : {} , 공격력 : {}".format(wraith1.name, wraith1.damage))
+'''1) class 에 있는 self를 제외한 모든 매개변수 적어주기 
+   2) wraith1. 을 하면 사용할 수 있는 멤버변수 정보가 나온다.
+      wraith1. 으로 멤버변수를 외부에서 사용 가능하다. '''
+
+wraith2 = unit("빼앗은 레이스",80,5)
+wraith2.cloking = True
+
+if wraith2.cloking == True:
+    print("{}는 현재 클로킹 상태입니다.".format(wraith2.name))
+
+# if wraith1.cloking == True:
+#     print("{}는 현재 클로킹 상태입니다.".format(wraith2.name))
+'''3) cloking 이라는 변수는 class 내 없다.
+      외부에서 객체에 매개변수 확장(추가) 가능하다.
+   4) if wraith1.cloking == True:
+      ==> 오류발생  / 확장한 객체(wraith2)만 변수 적용 가능. 다른 객체(wraith1)에는 적용할 수 없다. '''
