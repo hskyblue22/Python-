@@ -1,6 +1,6 @@
 # 파일 열어서 내용 불러오거나 파일에 새로운 내용 추가 가능
 
-file_score = open("score.txt", "w", encoding = "utf8")
+file_score = open("score.txt", "w", encoding = "utf8")   # file_score : 파일 객체를 저장하는 변수의 이름
 print("영어 : 50", file = file_score)
 print("수학 : 80", file = file_score)
 file_score.close()

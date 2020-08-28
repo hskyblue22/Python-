@@ -25,3 +25,16 @@ dropship = flyableunit()
       flyable.__init__(self)
       
       ==> 부모클래스 모두 출력된다. '''
+
+class parent1:
+    def overriding(self):
+        print("method_parent 클래스")
+
+class child1(parent1):
+    def overriding(self):
+        super().overriding()                # parent 클래스의 overriding method => 오버라이딩으로 무시되지 않고 출력됨 
+        print("method_child 클래스")
+
+
+# super().__init__()   :  child클래스 매개변수 순서에 따라서 출력이 달라짐
+# super().overriding() :  parent클래스 오버라이딩으로 무시되지 않고 출력됨
