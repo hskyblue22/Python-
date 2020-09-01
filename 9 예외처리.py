@@ -43,6 +43,13 @@ class BignumberError(Exception):
     def __str__(self):   #str => 내장함수X , 파이썬의 기본내장클래스 (__str__메서드 호출한다.)
         return self.msg
     #pass
+'''0) Bignumber(Exception) : 대부분의 예외클래스는 Exception 클래스의 하위 클래스이다.
+   1) str 메서드[def __str__(self)] : 문자열화 해주는 함수 선언 
+                                      return 으로 값 반환해주기
+      init 메서드 : 클래스 생성시 자동으로 실행되는 메서드
+   2) 파이썬에서는 모든 변수들이 변수이자 인스턴스이다. (까먹어서 다시 메모)
+   3) 어떤 값에 대해 ‘+’, ‘-‘ 등의 연산자를 실행 => 파이썬 내부적으로 ‘__add__’, ‘__sub__’
+      메소드를 실행하는 것과 동일하다. '''
 
 try:
     print("한 자리 숫자 전용 계산기입니다.")
@@ -56,4 +63,11 @@ except ValueError:
 except BignumberError as errr:
     print("에러발생! 한 자리 값만 입력하세요")
     print(errr)
+finally:
+    print("계산기를 종료합니다^^")
 
+'''4) if 조건:
+          조건 충족시 실행되는 문장
+      if 조건 충족되지 않을 때 실행되는 문장  ==> if문 바로 아래에 else를 쓰지 않고도 사용가능하네? 
+   5) finally : 예외처리구문에서 오류가 발생해도, 발생하지 않아도 실행된다.
+                없는 파일을 열려고 하거나 리스트에 없는 값에 접근하려고 할때 프로그램 강제종료를 방지하여 완성도를 높임'''
